@@ -1,0 +1,72 @@
+# 3)  Create a program named "my_set_store" which support following operations on two sets
+#     provided by user
+#
+# for ex:
+#  A = {1,2,3,4,5}
+#  B = {18,19,20,21}
+# is provided by the user
+#
+# Operations supported by our program are :
+#  1: Union
+#  2: Intersection
+#  3: A-B
+#  4: B-A
+#  5: Take a element from user and Display if that element is a member of set B
+#  6: Display number of elements in the set A
+#     7: Display number of elements in the set B
+#  8: Add an element taken from the user to the set A
+#  9: Add multiple elements taken from the user to the set A
+#  10: Remove an element taken from the user from set A
+
+A={1, 2, 3, 4, 5}
+B = {18, 19, 20, 21}
+def my_set_store():
+    flag = True
+    while (flag):
+        ch = int(input("Please choose between following options:\n1.Union\n2.Intersection\n3.A-B \n4.B-A\n5.Checking the "
+                   "element\n6.Display the number of element in Set A\n7.Display number of elements in Set B\n8.Adding "
+                   "element into A\n9.Adding elements into Set A\n10.Remove element form A\n11.EXIT\n"))
+        if ch == 1:
+            print(A.union(B))
+            break
+        elif ch == 2:
+            print(A.intersection(B))
+            break
+        elif ch == 3:
+            print(A.difference(B))
+            break
+        elif ch == 4:
+            print(B.difference(A))
+            break
+        elif ch == 5:
+            element = int(input("Please Enter the element"))
+            if element in B:
+                print("Yes We have Such member")
+            else:
+                print("Sorry we dont have such element")
+                break
+        elif ch == 6:
+            print("Set A is:\n", A)
+            break
+        elif ch == 7:
+            print("Set B having element as following:", B)
+            break
+        elif ch == 8:
+            element = int(input("Please Enter one element:"))
+            break
+        elif ch==9:
+            update_elements = (input("elements")).split()
+            new_set = set(update_elements)
+            l_set=A.union(new_set)
+            print("Updated Set is as follow:",l_set)
+            break
+        elif ch==10:
+            flag=False
+            print("Thank You..!")
+
+my_set_store()
+
+
+
+
+

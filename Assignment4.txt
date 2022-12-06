@@ -1,0 +1,222 @@
+https://www.practicepython.org/exercise/2014/02/05/02-odd-or-even.html
+
+Problem 1:
+from datetime import*
+Name=str(input("please enter your name "))
+Age=int(input("please enter age"))
+today=date.today()
+year=today.year
+print("Current Year")
+addage=100-Age
+print(addage)
+age100=print("You will turn 100 in year :" ,year+addage)
+
+
+Problem2:
+
+num=int(input("Please enter the number "))
+check=int(input("Enter the value of check"))
+
+def check_number(num):
+    if(num%2==0):
+        print("euuu...this is even number ")
+        if(num%4==0):
+            print("euuu....this number is multiple of four")
+        else:
+            print("number is not multiple of four")
+    else:
+        if(num%2!=0):
+            print("euu....this number is odd number")
+            print("As this number is odd it will not mulitple of four")
+    
+    if num % check == 0:
+        print(num, "divides evenly by", check)
+    else:
+        print(num, "does not divide evenly by", check)
+    
+check_number(num)
+
+
+#Problem 3:
+#Problem bases on list
+
+My_list=[]
+new_list=[]
+n=int(input("Please enter number of elements you want to add add in list\n"))
+print("Please enter elements")
+for i in range(1,n+1):
+    ele=int(input())
+    My_list.append(ele)
+print(My_list)
+for x in My_list:  # here for x means every element of that list so x will be every element and if will check condition for every element 
+    if x<5:
+        print("Elements which are less than 5 are :",x)
+        new_list.append(x) # we can append those all elemnts which are less than 5 using single for loop
+print(new_list)
+
+
+
+#Problem4:
+Printing the Table of given number 
+
+Num=int(input("Please enter the number"))
+my_divisor_list=[]
+for n in range(1,11):
+    div=Num*n
+    print(div)
+    my_divisor_list.append(div)
+print("elements which are divisor of",Num,"are:",my_divisor_list)
+
+Problem5:
+#Create a program that asks the user for a number and then prints out a list of all the divisors of that number.
+Num=int(input("Please enter the number"))
+my_divisor_list=[]
+for n in range(1,11):
+     if Num %n==0:
+        print(n)
+        my_divisor_list.append(n)
+print("elements which are divisor of",Num,"are:",my_divisor_list)
+
+
+Problem 5:
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 15, 8, 20, 10, 11, 12, 13]
+a.sort()
+b.sort()
+print(a)
+print(b)
+
+e=len(a)
+f=len(b)
+
+
+for i in range(0,e):
+    for j in range(0,f):
+        if a[i]==b[j]:
+            print(a[i])
+
+
+problem7:
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+b=[]
+len(a)
+for i in a:
+    if(i%2==0):
+        #print(i)
+        b.append(i)
+print(b)
+
+or
+
+b=[i for i in a if i%2==0]
+print(b)
+
+
+PROBLEM 8:
+
+print('''please pick one:
+                ROCK
+                SCISSOR
+                PAPER''')
+while(True):
+    game_dict={'ROCK':1,'SCISSOR':2 ,'PAPER':3}
+    player1=str(input("Player a:"))
+    player2=str(input("player b:"))
+    a=game_dict.get(player1)
+    b=game_dict.get(player2)
+    diff= a-b
+
+    if diff in [-1,2]:
+        print("Player A Wins")
+        if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+            continue
+        else:
+            print('Player B wins')
+            break
+    elif diff in [-2, 1]:
+        print('player b wins.')
+        if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+            continue
+        else:
+            print('game over.')
+            break
+    else:
+        print('Draw.Please continue.')
+        print('')
+
+problem 10:
+	a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+	b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+	for i in range(0,len(a)):
+   		 for j in range(0,len(b)):
+        		if a[i]==b[j]:
+           			 print(a[i])
+    
+problem 11:
+
+# def prime(number):
+#     for i in range(2,number):
+#         if(number%i==0):
+#             return False
+#     return True
+
+# print(prime(int(input("PLease number that you want ot check :\n"))))
+    
+    or
+
+# num = int(input("Please enter the value"))
+# for num in range(2,num):
+#     if num>1:
+#         for i in range(2,num):
+#             if(num%i==0):
+#                 break
+#         else:
+#             print(num)
+
+# def CheckPrime (prime):
+#     for i in range(2, prime):
+#         if prime%i == 0:
+#             return False
+#     return True
+
+# print(CheckPrime(int(input("Choose a number to verify if it is a prime number:\n"))))
+
+
+Problem12:
+def my_function(size):
+    a =[]
+    for i in range(0,size):
+        a.append(int(input("number?")))
+    print(a)
+    print(a[0])
+    print(a[-1])
+my_function(size=int(input("Please enter the size of list ")))
+ 
+
+problem 13:
+def my_function(size):
+    a =[]
+    b={}
+    for i in range(0,size):
+        a.append(int(input("number?")))
+    print(a)
+    b=set(a)
+    print(b)
+    print("updated list",b)
+my_function(size=int(input("Please enter the size of list ")))
+    
+
+Problem 15: to reverse the string 
+this will reverse the each letter 
+str1=input("Please enter the string")
+reversed_string=print(str1[::-1]) 
+
+To reverse only words not letter:
+print(" ".join((input("Enter some text.")).split(' ')[::-1]))
+
+use .join
+
+check problem 16 ....IMP
+
+        

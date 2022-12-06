@@ -1,0 +1,46 @@
+# 2) Create a program named "my_dict_store" which support following operations on
+# dictionary named "capitals" which would have keys as their country and values as their capitals
+# respectively from the user
+# for ex: "India" : "New Delhi" ,"USA" : "Washington DC","Nepal": "Kathmandu","Ukraine" : "Kyiv"
+# is provided by the user
+#
+# Operations supported by our program are :
+#     1: Display number of elements in the capitals collection
+#     2: Add an element to the capitals collection like --> Afghanistan: Kabul
+#     3: Add multiple elements to the capitals collection like -->  Albania:Tirana,Algeria:Algiers,Andorra:Andorra la Vella
+#     4: Remove an element from the collection
+#
+# Keep asking the user for the operation in this store untill he chooses to exit from the program
+member=int(input("Please enter no of members\n"))
+capitals={}
+def my_dict_store():
+    for i in range(member):
+        k=input("enter the key:")
+        v=input("enter the value:")
+        capitals.update({k:v})
+    flag=True
+    print("...................Options........................")
+    ch=int(input("1: Display number of elements in the capitals collection\n2:Add Single element\n3:Add Multiple elemetns\n4.Remove the element from the collection\n5.EXIT\n"))
+    while(flag):
+        if ch==1:
+            print("Dictionary having following members",capitals)
+            break
+        elif ch==2:
+            capitals.update({input("value"):input("key")})
+            print("Updated Collection:",capitals)
+            break
+        elif ch==3:
+            no_elements=int(input("No of elements you want to insert"))
+            for i in range(no_elements):
+                capitals.update({input("value"): input("key")})
+            print("Updated Collection:",capitals)
+            break
+        elif ch==4:
+            element=input("Please enter exact key of member you want to remove")
+            capitals1=capitals.pop(element)
+            print("Updated Collection",capitals)
+            break
+        elif ch==5:
+            flag=False
+            print("Thank You...!")
+my_dict_store()

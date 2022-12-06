@@ -1,0 +1,67 @@
+# Assignment/Exercises 
+# Topics covered : Modules,Functions,Looping,Conditional constructs,Input,Output,LIST Collections :
+# -------------------------------------------------------------------------------------------
+# 1) Create a program named "my_list_store"
+# which support following operations on list named "members" which is provided by the user 
+# for ex: ["Pratiksha","Kevin","Sachin","Yuvraj","Sania"] is provided by the user 
+# Operations supported by our program are :
+#   1:  Display number of elements in the members list
+#   2:  Add an element to the members collection like 'Sehwag' 
+#   3:  Add elements to the members collection like ['David','Bret','Sanju']
+#   4:  Remove a member from the collection at a given subscript
+#   5:  Remove the last member from the collection 
+#   6:  Display third, fourth and fifth element from the collection 
+# Keep asking the user for the operation in this store untill he chooses to exit from the program
+
+# def my_list_store():
+flag=True
+my_list=[]
+    
+size=int(input("please enter the size "))
+for i in range (0,size):
+    elements=input('please enter the string \n')
+    my_list.append(elements)
+
+ch=int(input("Options:\n1:Display number of elements in the members list.\n2:Adding an Element.\n3:Adding More than one element.\n4:Remove the element from the collection.\n5:Remove the last element in the list.\n6:Display third, fourth and fifth element from the collectionDisplay third, fourth and fifth element from the collection\n7:Display the third,fourth,fifth element from the list.\n7:Exit "))
+while(flag):
+    if(ch==1):
+        print("list is as following",my_list)
+        break
+    elif(ch==2):
+        my_list.append("sehwag")
+        print("list is as following",my_list)
+        break
+    elif(ch==3):
+        my_list.append('David')
+        my_list.append('Bret')
+        my_list.append('sanju')
+        print("list is as following",my_list)
+        break
+    elif(ch==4):
+        ind=int(input("please enter the index of elements that you want to remove .Note that index start from 0"))
+        print("list is as following",my_list)
+        my_list.remove(my_list[ind])
+        print('Updated List is as follow:',my_list)
+        break
+    elif(ch==5):
+        length=len(my_list)
+        my_list.remove(my_list[length])
+        print('Updated List is as follow:',my_list)
+        break
+    elif(ch==6):
+        print("Thrid ,fourth and fifth element in the list are :")
+        print(my_list[3])
+        print(my_list[4])
+        print(my_list[5])
+        break
+    elif(ch==7):
+        flag=False
+        print("Thanks....!")
+        my_list.append('sanju')
+            
+        
+            
+            
+            
+    
+    
